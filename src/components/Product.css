@@ -1,0 +1,103 @@
+.container-product{
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+    padding: 25px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    max-width: 3500px;
+    margin: auto;
+    width: 85%;
+    box-shadow: rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
+  }
+
+  .row {
+padding-left: 5rem; /* Adjust as needed */
+padding-right: 5rem; /* Adjust as needed */
+}
+
+.no-gutters {
+margin-right: 0;
+margin-left: 0;
+}
+
+.no-gutters > .col,
+.no-gutters > [class*="col-"] {
+padding-right: 0;
+padding-left: 0;
+}
+
+.figure {
+margin: 0;
+}
+
+.figure-img {
+display: block;
+width: 100%;
+max-height: 325px;
+object-fit: cover;
+}
+
+.col-2 mb-2{
+padding-right: 5rem;
+padding-left: 5rem;
+margin-left: 5px;
+margin-right: 5px;
+}
+
+
+.card-no-border {
+border: none;
+margin: 0;
+padding: 0;
+}
+
+.card-no-border .card-img {
+width: 100%;
+height: auto; /* Maintain aspect ratio */
+}
+
+.card-body {
+padding: 1rem; /* Adjust padding inside the card body as needed */
+background-color: white;
+color: black;
+}
+
+.btn-custom{
+  background-color: black;
+  margin-left: 10px;
+  padding: 7px;
+  border: none;
+}
+
+.btn-custom1 {
+  background-color: black;
+  margin-left: 10px;
+  padding: 7px;
+  border: none;
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 1000; /* Ensures it is on top of other elements */
+}
+
+
+.total-price{
+   text-align: right;
+   padding: 15px;
+   margin-top: 50px;
+   margin-bottom: 50px;
+}
+
+h2{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.product-image {
+  width: 100%; 
+  height: 275px; 
+  object-fit: cover; 
+  border-radius: 1px;
+}

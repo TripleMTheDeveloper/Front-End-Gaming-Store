@@ -1,0 +1,52 @@
+/* Centering the container */
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+    padding: 25px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    max-width: 3500px;
+    margin: auto;
+    width: 85%;
+    box-shadow: rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
+  }
+  
+  /* Ensuring the image and form take the full width of the container */
+  .container-login img {
+    width: 100%;
+    border-radius: 0px;
+  }
+  
+  .container-login form {
+    font-family: sans-serif;
+    font-weight: bolder;
+    width: 100%;
+    border-radius: 25px;
+    border: none;
+  }
+  
+  .form-control {
+    position: relative;
+    border: none;
+    margin-bottom: 15px;
+  }
+  
+  .form-control label {
+    display: flexbox;
+    border: none;
+    margin-bottom: 5px;
+  }
+  
+  .form-control input,
+  .form-control textarea {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    font-weight: bolder;
+  }

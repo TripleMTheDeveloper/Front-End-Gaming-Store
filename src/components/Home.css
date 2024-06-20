@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    padding: 0;
+    gap: 75px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: rgb(255, 255, 255);
+}
+
+.home-container{
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+    padding: 25px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    max-width: 3500px;
+    margin: auto;
+    width: 35%;
+    box-shadow: rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
+  }
+
+.no__bullets{
+  list-style-type: none;
+}
+
+.my-image{
+    margin-top: 75px;
+    margin-bottom: 75px;
+    border-radius: 55px;
+    object-fit: cover;
+}
+
+
