@@ -19,32 +19,39 @@ import Logo from './images/Untitled Design(5).png';
 import Checkout from './Checkout';
 
 function Products() {
+  // Get the addToCart function from the CartContext using useContext hook
   const { addToCart } = useContext(CartContext);
+
+  // State to manage the visibility of the Checkout component
   const [showCheckout, setShowCheckout] = useState(false);
 
+  // Array of product data containing name, description, price, and image for each product
   const productData = [
-    { name: "Football Manager 24", description: "The world's best football simulator", price: 649, image: FMCover },
-    { name: "Football Manager 24 (Console)", description: "The world's best football simulator", price: 599, image: FMCover2 },
-    { name: "EA FC 24 LIMITED EDITION", description: "The world's leading football game", price: 1499, image: EAFCCover2 },
+    { name: "Football Manager 24", description: "football simulator", price: 649, image: FMCover },
+    { name: "Football Manager 24 ", description: "football simulator", price: 599, image: FMCover2 },
+    { name: "EA FC 24 LIMITED EDITION", description: "football game", price: 1499, image: EAFCCover2 },
     { name: "EA FC 24", description: "The world's leading football game", price: 1000, image: EAFCCover },
-    { name: "F1 24", description: "The world's leading racing game", price: 625, image: F1Cover },
-    { name: "F1 Manager", description: "The world's leading racing simulator", price: 625, image: F1Cover2 },
+    { name: "F1 24", description: "Racing game", price: 625, image: F1Cover },
+    { name: "F1 Manager", description: "Racing simulator", price: 625, image: F1Cover2 },
     { name: "NBA 2k24", description: "In honour of the mamber", price: 1000, image: NBA },
-    { name: "WWE 2k24", description: "The most dynamic wresting entertainment simulator", price: 1250, image: WWE },
-    { name: "Mortal Kombat", description: "The most dynamic wresting entertainment simulator", price: 1250, image: MKCover },
-    { name: "Street Fighter", description: "The most dynamic wresting entertainment simulator", price: 1150, image: SFCover },
-    { name: "Guilty Gear Strive", description: "The most dynamic wresting entertainment simulator", price: 1250, image: GuiltyGear },
-    { name: "Dragon Ball Z Kakarot", description: "The most dynamic wresting entertainment simulator", price: 799, image: DBZCover }
+    { name: "WWE 2k24", description: "Wresting entertainment simulator", price: 1250, image: WWE },
+    { name: "Mortal Kombat", description: "Wresting entertainment simulator", price: 1250, image: MKCover },
+    { name: "Street Fighter", description: "Wresting entertainment simulator", price: 1150, image: SFCover },
+    { name: "Guilty Gear Strive", description: "Wresting entertainment simulator", price: 1250, image: GuiltyGear },
+    { name: "Dragon Ball Z Kakarot", description: "Wresting entertainment simulator", price: 799, image: DBZCover }
   ];
 
+  // Function to show the Checkout component
   const handleCheckout = () => {
     setShowCheckout(true);
   };
 
+  // Function to hide the Checkout component and go back to product listing
   const handleBackToProducts = () => {
     setShowCheckout(false);
   };
 
+  // Function to handle payment success and hide the Checkout component
   const handlePaymentSuccess = () => {
     setShowCheckout(false); // Hide Checkout component after successful payment
   };
@@ -52,21 +59,16 @@ function Products() {
   return (
     <div className='container-product'>
       {showCheckout ? (
+        // Show the Checkout component if showCheckout state is true
         <Checkout onPaymentSuccess={handlePaymentSuccess} onBack={handleBackToProducts} />
       ) : (
         <>
-          <Figure>
-            <Figure.Image
-              src={Logo}
-              alt={Logo}
-              className="figure-img img-fluid product-image"
-            />
-          </Figure>
           <h2>Products</h2>
           <div className="row no-gutters">
+            {/* Map through the productData array and render a Card for each product */}
             {productData.map((product, index) => (
               <div key={index} className="col-6 col-md-3 mb-3">
-                <Card>
+                <Card className='product-card'>
                   <Figure>
                     <Figure.Image
                       src={product.image}
@@ -78,6 +80,7 @@ function Products() {
                     <Card.Title>{product.name}</Card.Title>
                     <Card.Text>{product.description}</Card.Text>
                     <Card.Text>Price: R{product.price.toFixed(2)}</Card.Text>
+                    {/* Button to add product to cart */}
                     <Button className='btn-custom' onClick={() => addToCart(product)}>Add to Cart</Button>
                   </Card.Body>
                 </Card>
@@ -85,8 +88,10 @@ function Products() {
             ))}
           </div>
           <div className='total-price'>
+            {/* Component to display the total price */}
             <TotalPrice />
           </div>
+          {/* Button to proceed to checkout */}
           <Button className='btn-custom1' onClick={handleCheckout}>Proceed to Checkout</Button>
         </>
       )}

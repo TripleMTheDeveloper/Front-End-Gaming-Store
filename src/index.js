@@ -1,17 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';  // Your main app component
+import App from './App';
 import { CartProvider } from './components/Cart';
-import { AuthProvider } from './components/AuthContext';
+import { Provider } from 'react-redux';
+import store from './store/Store';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <AuthProvider>
+  <Provider store={store}>
     <CartProvider>
       <App />
     </CartProvider>
-    </AuthProvider>
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
+
+
 

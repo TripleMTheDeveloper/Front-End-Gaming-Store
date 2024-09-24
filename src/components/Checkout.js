@@ -6,12 +6,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Checkout.css';
 
 const Checkout = ({ onPaymentSuccess, onBack }) => {
+  // Access cart context values and methods
   const { cart, totalPrice, clearCart } = useContext(CartContext);
+
+  // Local state to manage loading state, shipping options, and modal visibility
   const [isLoading, setIsLoading] = useState(false);
   const [shippingOption, setShippingOption] = useState('standard');
   const [shippingCost, setShippingCost] = useState(50);
   const [showModal, setShowModal] = useState(false);
 
+  // Handle the payment process
   const handlePayment = () => {
     setIsLoading(true);
     // Simulate payment processing delay
@@ -19,10 +23,11 @@ const Checkout = ({ onPaymentSuccess, onBack }) => {
       alert('Payment successful!');
       setIsLoading(false);
       clearCart(); // Clear the cart after successful payment
-      onPaymentSuccess(); // Call the callback function to handle successful payment
+      onPaymentSuccess(); // Notify parent component of successful payment
     }, 2000);
   };
 
+  // Update shipping cost based on the selected option
   const handleShippingChange = (event) => {
     const option = event.target.value;
     setShippingOption(option);
@@ -30,14 +35,16 @@ const Checkout = ({ onPaymentSuccess, onBack }) => {
     if (option === 'express') {
       setShippingCost(100); // Assume express shipping costs 100
     } else {
-      setShippingCost(50);
+      setShippingCost(50); // Standard shipping cost
     }
   };
 
+  // Calculate the total price including shipping cost
   const calculateTotalWithShipping = () => {
     return totalPrice + shippingCost;
   };
 
+  // Functions to handle modal visibility
   const handleCloseModal = () => setShowModal(false);
   const handleShowModal = () => setShowModal(true);
 
@@ -100,9 +107,9 @@ const Checkout = ({ onPaymentSuccess, onBack }) => {
             <li>Standard Shipping: Costs R50 and takes 5-7 business days.</li>
             <li>Express Shipping: Costs R100 and takes 1-3 business days.</li>
           </ul>
-        <p>
-          If you still feel unsure, contact us at 012 345 6789 or email us at marcusmdlalo252@gmail.com
-        </p>
+          <p>
+            If you still feel unsure, contact us at 012 345 6789 or email us at marcusmdlalo252@gmail.com
+          </p>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleCloseModal}>
@@ -115,6 +122,7 @@ const Checkout = ({ onPaymentSuccess, onBack }) => {
 };
 
 export default Checkout;
+
 
 
 

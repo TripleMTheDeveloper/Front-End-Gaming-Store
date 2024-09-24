@@ -1,3 +1,4 @@
+// components/Login.js
 import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
@@ -138,7 +139,7 @@ const Login = () => {
                       Register
                     </button>
                     <button type="button" onClick={() => setIsLoggingIn(true)}>
-                      Login
+                      Cancel
                     </button>
                   </Form>
                 )}
@@ -152,6 +153,7 @@ const Login = () => {
 };
 
 export default Login;
+
 
 
 

@@ -3,7 +3,7 @@
     flex-direction: column;
     gap: 75px;
     padding: 25px;
-    background-color: white;
+    background-color: #252525;
     align-items: center;
     justify-content: center;
     max-width: 3500px;
@@ -61,8 +61,12 @@ height: auto; /* Maintain aspect ratio */
 
 .card-body {
 padding: 1rem; /* Adjust padding inside the card body as needed */
-background-color: white;
-color: black;
+background-color: #252525;
+color: rgb(255, 255, 255);
+}
+
+.product-card{
+  border: none;
 }
 
 .btn-custom{

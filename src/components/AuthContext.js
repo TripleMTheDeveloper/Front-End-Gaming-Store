@@ -1,48 +1,47 @@
-import React, { createContext, useState, useEffect, useContext } from 'react';
+import { useSelector, useDispatch } from 'react-redux'; 
+import { loadUser, register, login, logout } from '../store/authS'; 
+import { useEffect } from 'react'; 
 
-const AuthContext = createContext();
-
-export const useAuth = () => useContext(AuthContext);
-
-export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
-  const [registeredUsers, setRegisteredUsers] = useState([]);
-
+// Custom hook to manage authentication logic
+export const useAuth = () => {
+  const auth = useSelector((state) => state.auth); // Select auth state from the Redux store
+  const dispatch = useDispatch(); // Get the dispatch function to send actions to the store
+  
   useEffect(() => {
-    const storedUser = localStorage.getItem('user');
+    const storedUser = localStorage.getItem('user'); // Retrieve stored user data from localStorage
     if (storedUser) {
-      setUser(JSON.parse(storedUser));
+      dispatch(loadUser(JSON.parse(storedUser))); // Dispatch loadUser action if user data exists
     }
-  }, []);
+  }, [dispatch]); // Dependency array with dispatch to run this effect only once
 
-  const register = (user) => {
-    setRegisteredUsers([...registeredUsers, user]);
-    console.log('Registered users:', registeredUsers);
+  // Function to handle user registration
+  const handleRegister = (user) => {
+    dispatch(register(user)); // Dispatch register action with user data
   };
 
-  const login = (user) => {
-    const registeredUser = registeredUsers.find(u => u.username === user.username && u.password === user.password);
-    if (registeredUser) {
-      setUser(user);
-      localStorage.setItem('user', JSON.stringify(user));
-      console.log('User logged in:', user);
-      return { success: true };
-    } else {
-      console.log('Invalid username or password');
-      return { success: false, message: 'Invalid username or password' };
+  // Function to handle user login
+  const handleLogin = (user) => {
+    try {
+      dispatch(login(user)); // Dispatch login action with user data
+    } catch (error) {
+      console.error(error.message); // Log error message to console if login fails
+      return { success: false, message: error.message }; // Return failure response with error message
     }
+    return { success: true }; // Return success response if login succeeds
   };
 
-  const logout = () => {
-    setUser(null);
-    localStorage.removeItem('user');
+  // Function to handle user logout
+  const handleLogout = () => {
+    dispatch(logout()); // Dispatch logout action
   };
 
-  return (
-    <AuthContext.Provider value={{ user, register, login, logout }}>
-      {children}
-    </AuthContext.Provider>
-  );
+  // Return object containing user data and auth functions
+  return {
+    user: auth.user, // Current user data from auth state
+    register: handleRegister, 
+    login: handleLogin, 
+    logout: handleLogout 
+  };
 };
 
 

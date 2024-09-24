@@ -1,11 +1,16 @@
+body{
+  background-color: #252525;
+}
+
 .App {
   text-align: center;
+  background-color: #252525;
 }
 
 .nav__bar{
-  background-color: #ffffff;
-color: white;
-padding: 10px 20px;
+  background-color: #252525;
+  color: white;
+  padding: 10px 20px;
 }
 
 nav{
