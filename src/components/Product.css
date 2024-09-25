@@ -64,6 +64,7 @@ padding: 1rem; /* Adjust padding inside the card body as needed */
 background-color: #252525;
 color: rgb(255, 255, 255);
 text-align: left;
+font-size: 30px;
 }
 
 .product-card{
@@ -109,4 +110,12 @@ h2{
   height: 275px; 
   object-fit: cover; 
   border-radius: 1px;
+}
+
+.product-header{
+  width: 1400px;
+}
+
+.custom-hr{
+  margin: 20px 90px;
 }
