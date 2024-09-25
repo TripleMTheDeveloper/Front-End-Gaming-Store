@@ -64,7 +64,7 @@ const Checkout = ({ onPaymentSuccess, onBack }) => {
                       <Figure.Image
                         src={product.image}
                         alt={product.name}
-                        className='figure-img1 img-fluid1 product-image1'
+                        className='checkout-img'
                       />
                     </Figure>
                     <div>
