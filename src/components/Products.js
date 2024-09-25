@@ -67,7 +67,7 @@ function Products() {
         <Checkout onPaymentSuccess={handlePaymentSuccess} onBack={handleBackToProducts} />
       ) : (
         <>
-          x
+          <hr className='custom-hr'></hr>
           <div className="row g-5">
             <h className="section-header">Sports</h>
             {/* Map through the productData array and render a Card for each product */}
