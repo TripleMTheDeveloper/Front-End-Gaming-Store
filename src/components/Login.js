@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import './Login.css';
-import profile from './images/profile.jpg';
+import profile from './images/Profile.png';
 import { Figure } from 'react-bootstrap';
 import { useAuth } from './AuthContext';
 
@@ -77,18 +77,18 @@ const Login = () => {
                   <Form>
                     <div className='form-control'>
                       <label>Username</label>
-                      <Field type="text" name="username" />
+                      <Field className="input-text" type="text" name="username" />
                       <ErrorMessage name="username" component="div" />
                     </div>
                     <div className='form-control'>
                       <label>Password</label>
-                      <Field type="password" name="password" />
+                      <Field className="input-text" type="password" name="password" />
                       <ErrorMessage name="password" component="div" />
                     </div>
-                    <button type="submit" disabled={isSubmitting}>
+                    <button className="sign-in-button" type="submit" disabled={isSubmitting}>
                       Login
                     </button>
-                    <button type="button" onClick={() => setIsLoggingIn(false)}>
+                    <button className="sign-in-button" type="button" onClick={() => setIsLoggingIn(false)}>
                       Register
                     </button>
                   </Form>
@@ -112,33 +112,33 @@ const Login = () => {
                   <Form>
                     <div className='form-control'>
                       <label>First Name</label>
-                      <Field type="text" name="firstName" />
+                      <Field className="input-text" type="text" name="firstName" />
                       <ErrorMessage name="firstName" component="div" />
                     </div>
                     <div className='form-control'>
                       <label>Second Name</label>
-                      <Field type="text" name="secondName" />
+                      <Field className="input-text" type="text" name="secondName" />
                       <ErrorMessage name="secondName" component="div" />
                     </div>
                     <div className='form-control'>
                       <label>Email</label>
-                      <Field type="email" name="email" />
+                      <Field className="input-text" type="email" name="email" />
                       <ErrorMessage name="email" component="div" />
                     </div>
                     <div className='form-control'>
                       <label>Username</label>
-                      <Field type="text" name="username" />
+                      <Field className="input-text" type="text" name="username" />
                       <ErrorMessage name="username" component="div" />
                     </div>
                     <div className='form-control'>
                       <label>Password</label>
-                      <Field type="password" name="password" />
+                      <Field className="input-text" type="password" name="password" />
                       <ErrorMessage name="password" component="div" />
                     </div>
-                    <button type="submit" disabled={isSubmitting}>
+                    <button className="sign-in-button" type="submit" disabled={isSubmitting}>
                       Register
                     </button>
-                    <button type="button" onClick={() => setIsLoggingIn(true)}>
+                    <button className="sign-in-button" type="button" onClick={() => setIsLoggingIn(true)}>
                       Cancel
                     </button>
                   </Form>

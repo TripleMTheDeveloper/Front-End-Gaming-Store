@@ -63,7 +63,7 @@ function Products() {
       ) : (
         <>
           <h2>Products</h2>
-          <div className="row no-gutters">
+          <div className="row g-5">
             {/* Map through the productData array and render a Card for each product */}
             {productData.map((product, index) => (
               <div key={index} className="col-6 col-md-3 mb-3">
@@ -72,7 +72,7 @@ function Products() {
                     <Figure.Image
                       src={product.image}
                       alt={product.name}
-                      className="figure-img img-fluid product-image"
+                      className="figure-img "
                     />
                   </Figure>
                   <Card.Body className='card-body' >

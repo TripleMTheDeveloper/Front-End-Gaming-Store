@@ -2,7 +2,7 @@ import React from 'react';
 import './Home.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HomeHeader from './images/GamingHeader.png';
-import { Card, Button, Figure } from 'react-bootstrap';
+import { Card, Figure } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import FMCover from './images/FM24PC.jpeg';
 import FMCover2 from './images/FM24Console.jpeg';
@@ -57,7 +57,7 @@ function Home() {
                     <Figure.Image
                       src={product.image}
                       alt={product.name}
-                      className="figure-img img-fluid product-image"
+                      className="figure-img"
                     />
                   </Figure>
                   <Card.Body className='card-body'>
@@ -81,7 +81,7 @@ function Home() {
                     <Figure.Image
                       src={product.image}
                       alt={product.name}
-                      className="figure-img img-fluid product-image"
+                      className="figure-img"
                     />
                   </Figure>
                   <Card.Body className='card-body'>
@@ -104,7 +104,7 @@ function Home() {
                     <Figure.Image
                       src={product.image}
                       alt={product.name}
-                      className="figure-img img-fluid product-image"
+                      className="figure-img"
                     />
                   </Figure>
                   <Card.Body className='card-body'>

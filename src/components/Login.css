@@ -4,7 +4,8 @@
     flex-direction: column;
     gap: 75px;
     padding: 25px;
-    background-color: white;
+    background-color: #252525 !important;
+    color: azure;
     align-items: center;
     justify-content: center;
     max-width: 3500px;
@@ -31,7 +32,11 @@
   .form-control {
     position: relative;
     border: none;
+    background-color: #252525;
+    color: azure;
+    padding: 10px 10px 10px 0px;
     margin-bottom: 15px;
+    width: 350px;
   }
   
   .form-control label {
@@ -50,3 +55,22 @@
     border-radius: 25px;
     font-weight: bolder;
   }
+
+  .sign-in-button{
+    background-color: transparent;
+    color: azure;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .sign-in-button:hover{
+    background-color: azure;
+    color: #000;
+  }
+
+  .input-text{
+    color: azure;
+  }
+

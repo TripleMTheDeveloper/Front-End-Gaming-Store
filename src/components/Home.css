@@ -48,6 +48,11 @@ body{
   margin: 60px 0px 30px;
 }
 
+.figure-img{
+  border-radius: 10px;
+  min-height: 400px;
+}
+
 
 
 
