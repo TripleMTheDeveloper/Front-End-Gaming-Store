@@ -1,6 +1,5 @@
-// App.js
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom'; // Import NavLink
 import Home from './components/Home';
 import Login from './components/Login';
 import Products from './components/Products';
@@ -29,9 +28,21 @@ const Header = () => {
     <header className="App-header">
       <nav className='nav__bar'>
         <ul className='links'>
-          <li><Link to="/" className="nav__link">Home</Link></li>
-          <li><Link to="/Products" className="nav__link">Products</Link></li>
-          <li><Link to="/Login" className="nav__link">Login</Link></li>
+          <li className='list'>
+            <NavLink to="/" className="nav__link" activeClassName="active-link" >
+              Explore
+            </NavLink>
+          </li>
+          <li className='list'>
+            <NavLink to="/Products" className="nav__link" activeClassName="active-link">
+              Browse
+            </NavLink>
+          </li>
+          <li className='list'>
+            <NavLink to="/Login" className="nav__link" activeClassName="active-link">
+              Sign in
+            </NavLink>
+          </li>
           <li>{user && <span className="username">{user.username}</span>}</li>
         </ul>
       </nav>
@@ -40,6 +51,7 @@ const Header = () => {
 };
 
 export default App;
+
 
 
 

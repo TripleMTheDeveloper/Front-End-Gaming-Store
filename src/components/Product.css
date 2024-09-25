@@ -63,10 +63,15 @@ height: auto; /* Maintain aspect ratio */
 padding: 1rem; /* Adjust padding inside the card body as needed */
 background-color: #252525;
 color: rgb(255, 255, 255);
+text-align: left;
 }
 
 .product-card{
   border: none;
+}
+
+.product-card :hover{
+  cursor: pointer;
 }
 
 .btn-custom{

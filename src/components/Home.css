@@ -1,43 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
 *{
   background-color: #252525;
+  font-weight: bold;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body{
-    margin: 0;
-    padding: 0;
-    gap: 75px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
     background-color: #252525;
 }
 
-.home-container{
-    display: flex;
-    flex-direction: column;
-    gap: 75px;
-    padding: 25px;
-    background-color: #252525;
-    align-items: center;
-    justify-content: center;
-    max-width: 3500px;
-    margin: auto;
-    width: 35%;
-    box-shadow: rgba(0, 0, 0, 0.1);
-    min-height: 100vh;
+.container{
+    background-color: #252525 !important;
   }
 
 .no__bullets{
   list-style-type: none;
 }
 
-.my-image{
-    margin-top: 75px;
-    margin-bottom: 75px;
-    border-radius: 55px;
-    object-fit: cover;
+.home-header{
+  border-radius: 10px;
+  width: 1470px;
 }
+
+.shop-now-button{
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  top: 300px;
+  left: 880px;
+}
+
+.shop-now-button:hover{
+  background-color: white;
+  color: black;
+}
+
+.section-header{
+  color: azure;
+  font-size: 75px;
+  text-align: left;
+  margin: 60px 0px 30px;
+}
+
+
 
 

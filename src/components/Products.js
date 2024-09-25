@@ -15,7 +15,6 @@ import MKCover from './images/MKCover.jpg';
 import SFCover from './images/SFCover.jpeg';
 import GuiltyGear from './images/GuiltyGear.jpeg';
 import DBZCover from './images/DBZCover.jpeg';
-import Logo from './images/Untitled Design(5).png';
 import Checkout from './Checkout';
 
 function Products() {
@@ -76,7 +75,7 @@ function Products() {
                       className="figure-img img-fluid product-image"
                     />
                   </Figure>
-                  <Card.Body className='card-body'>
+                  <Card.Body className='card-body' >
                     <Card.Title>{product.name}</Card.Title>
                     <Card.Text>{product.description}</Card.Text>
                     <Card.Text>Price: R{product.price.toFixed(2)}</Card.Text>
