@@ -1,3 +1,7 @@
+*{
+  background-color: #252525 !important;
+}
+
 .container-product{
     display: flex;
     flex-direction: column;
@@ -83,7 +87,7 @@ font-size: 30px;
 }
 
 .btn-custom1 {
-  background-color: black;
+  background-color: black !important;
   margin-left: 10px;
   padding: 7px;
   border: none;
@@ -91,6 +95,11 @@ font-size: 30px;
   bottom: 20px; /* Adjust as needed */
   right: 20px; /* Adjust as needed */
   z-index: 1000; /* Ensures it is on top of other elements */
+}
+
+.btn-custom1:hover {
+  background: white !important;
+  color: purple;
 }
 
 
@@ -117,5 +126,5 @@ h2{
 }
 
 .custom-hr{
-  margin: 20px 90px;
+  margin: 20px 90px !important;
 }

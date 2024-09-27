@@ -12,6 +12,10 @@ body{
     background-color: #252525;
 }
 
+.bottom-header{
+  font-size: 200px;
+}
+
 .container{
     background-color: #252525 !important;
   }
@@ -55,12 +59,12 @@ body{
 }
 
 .shop-now-button:hover{
-  background-color: white;
+  background-color: white !important;
   color: purple;
 }
 
 .shop-now-button2:hover{
-  background-color: white;
+  background-color: white !important;
   color: purple;
 }
 

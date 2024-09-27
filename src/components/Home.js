@@ -158,7 +158,7 @@ function Home() {
             ))}
           </div>
           <hr className='custom-hr'></hr>
-          <h>TripleM</h>
+          <h1 className='bottom-header'>M CUBED</h1>
         </div> 
     </div>
   )
