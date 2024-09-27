@@ -1,3 +1,8 @@
+*{
+  color: azure;
+  background-color: #333333;
+}
+
 .checkout-container {
   display: flex;
   flex-direction: column;
@@ -5,9 +10,9 @@
   align-items: center;
   margin-left: 150px;
   gap: 45px;
-  background-color: #252525;
+  background-color: #333333;
   width:115%;
-  max-width: 1000px;
+  max-width: 1200px;
   padding: 25px;
   border-radius: 75px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -15,9 +20,14 @@
 }
 
 .checkout-card{
+    background-color: #333333;
     text-align: left;
     border-radius: 75px;
     border: none;
+}
+
+.card-body{
+  background-color: #333333;
 }
 
 .no-bullets {
@@ -26,46 +36,76 @@
 }
 
 .checkout-item1 {
+  background-color: #333333;
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
 }
 
-.checkout-img{
-  max-height: 100px !important;
+.img {
+  max-height: 200px !important;
+  max-width: 210px !important;
+  width: 100% !important; /* Ensures the image scales to fit the max-width */
+  height: 100% !important; /* Ensures the image scales to fit the max-height */
+  object-fit: cover; /* Ensures the image maintains aspect ratio while fitting the dimensions */
 }
 
-.img-fluid1 {
-  max-width: 100%;
-  height: auto;
-}
-
-.product-image1 {
-  max-width: 100%;
-  height: auto;
-}
 
 .form-control1 {
   margin: 20px 0;
+  background-color: #333333;
 }
 
 .shipping-input {
+  background-color: #333333;
   margin-right: 10px;
 }
 
 .pay-buttons {
+  background-color: #333333;
+  border: none;
   display: flex;
   gap: 10px;
   justify-content: center;
 }
 
+.card-text{
+  background-color: #333333;
+}
+
 .product-info{
-   display: flex;
+  background-color: #333333;
+  display: flex;
   align-items: center; 
 }
 
+.price-info{
+  background-color: #333333;
+}
+
 .info-icon{
+  background-color: #333333;
   z-index: 1000;
   cursor: pointer;
 }
+
+.pay-now{
+  color: rgb(252, 252, 252);
+  border: none;
+  border-radius: 10px;
+}
+
+.pay-now:hover{
+  cursor: pointer;
+  background-color: white;
+  color: purple;
+}
+
+.shipping-options{
+  background-color: #333333;
+  color: rgb(252, 252, 252);
+  border: none;
+  border-radius: 10px;
+}
+

@@ -157,6 +157,8 @@ function Home() {
               </div>
             ))}
           </div>
+          <hr className='custom-hr'></hr>
+          <h>TripleM</h>
         </div> 
     </div>
   )

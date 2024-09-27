@@ -64,10 +64,10 @@ const Checkout = ({ onPaymentSuccess, onBack }) => {
                       <Figure.Image
                         src={product.image}
                         alt={product.name}
-                        className='checkout-img'
+                        className='img'
                       />
                     </Figure>
-                    <div>
+                    <div className='price-info'>
                       {product.name} - R{product.price.toFixed(2)}
                     </div>
                   </div>
@@ -82,14 +82,14 @@ const Checkout = ({ onPaymentSuccess, onBack }) => {
                 Choose a shipping option:
                 <FaInfoCircle className='info-icon' onClick={handleShowModal} />
               </label>
-              <select id="shipping" value={shippingOption} onChange={handleShippingChange}>
-                <option value="standard">Standard Shipping - R50.00</option>
-                <option value="express">Express Shipping - R100.00</option>
+              <select className='pay-now' id="shipping" value={shippingOption} onChange={handleShippingChange}>
+                <option className='shipping-options' value="standard">Standard Shipping - R50.00</option>
+                <option className='shipping-options' value="express">Express Shipping - R100.00</option>
               </select>
             </div>
             <div className='pay-buttons'>
-              <button onClick={handlePayment}>Pay Now</button>
-              <button onClick={onBack}>Back to Products</button>
+              <button className='pay-now' onClick={handlePayment}>Pay Now</button>
+              <button className='pay-now' onClick={onBack}>Back to Products</button>
             </div>
           </Card.Body>
         </Card>
